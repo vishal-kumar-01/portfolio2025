@@ -87,7 +87,7 @@ const Home = () => {
           </button>
 
           <a
-            href="/vishal-Resume-1.pdf"
+            href="/Vishal-Resume.pdf"
             download
             ref={resumeBtnRef}
             onClick={() => addClickEffect(resumeBtnRef)}
