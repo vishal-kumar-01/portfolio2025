@@ -20,14 +20,14 @@ const Projects = () => {
     {
       title: 'Dice Roller App',
       desc: 'Dice Roller App — A clean and responsive React app that lets you roll a virtual dice with smooth animation and dynamic image updates. Built with React hooks and deployed on Netlify.',
-      image: dice, // 
+      image: dice,
       github: 'https://github.com/vishal-kumar-01/Dicd-Roller',
       live: 'https://dicerollerapp1.netlify.app/',
     },
-      {
+    {
       title: '3D Tilt Card',
       desc: 'A modern, visually engaging card component with smooth 3D tilt effect that reacts to mouse movement.',
-      image: tilt, // 
+      image: tilt,
       github: 'https://github.com/vishal-kumar-01/3D-Tilt-Card',
       live: 'https://3d-tiltcard.netlify.app/',
     },
@@ -35,12 +35,13 @@ const Projects = () => {
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-      entries => {
-        entries.forEach((entry, index) => {
+      (entries) => {
+        entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            setVisibleCards(prev => {
+            const idx = parseInt(entry.target.dataset.index, 10);
+            setVisibleCards((prev) => {
               const updated = [...prev];
-              updated[index] = true;
+              updated[idx] = true;
               return updated;
             });
           }
@@ -49,9 +50,9 @@ const Projects = () => {
       { threshold: 0.3 }
     );
 
-    cardsRef.current.forEach(card => card && observer.observe(card));
+    cardsRef.current.forEach((card) => card && observer.observe(card));
     return () => {
-      cardsRef.current.forEach(card => card && observer.unobserve(card));
+      cardsRef.current.forEach((card) => card && observer.unobserve(card));
     };
   }, []);
 
@@ -67,7 +68,8 @@ const Projects = () => {
         {projectList.map((project, index) => (
           <div
             key={project.title}
-            ref={el => (cardsRef.current[index] = el)}
+            ref={(el) => (cardsRef.current[index] = el)}
+            data-index={index}
             className={`project-card ${visibleCards[index] ? 'visible' : ''}`}
           >
             <img
