@@ -1,0 +1,130 @@
+.skills-section {
+  padding: 80px 20px;
+  background-color: #121212;
+  color: #fff;
+  text-align: center;
+  min-height: 100vh;
+}
+
+.section-title {
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: #00f5d4;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  gap: 25px;
+  max-width: 900px;
+  margin: 0 auto 60px;
+  padding: 0 10px;
+}
+
+.skill-card {
+  background-color: #1e1e1e;
+  border: 2px solid transparent;
+  padding: 20px 10px;
+  border-radius: 10px;
+  transition: 0.4s ease;
+  box-shadow: 0 0 10px rgba(0, 245, 212, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.skill-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.skill-card:hover {
+  transform: scale(1.1);
+  border-color: #00f5d4;
+  box-shadow: 0 0 15px rgba(0, 245, 212, 0.3);
+}
+
+.skill-card img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+  transition: transform 0.4s ease;
+}
+
+.skill-card:hover img {
+  transform: rotate(360deg) scale(1.1);
+}
+
+.skill-card p {
+  color: #fff;
+  font-size: 15px;
+  margin: 0;
+}
+
+.tools-title {
+  margin-top: 60px;
+}
+.skills-para {
+  max-width: 850px;
+  margin: 10px auto 40px;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #ccc;
+  text-align: center;
+  animation: fadeIn 0.7s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.skill-card {
+  background-color: #2a2a2a;
+  border-radius: 12px;
+  padding: 20px;
+  width: 120px;
+  text-align: center;
+  color: white;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease-in-out;
+}
+
+.skill-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.skill-card img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.soft {
+  background-color: #333;
+  font-size: 16px;
+}
+
+.soft .emoji {
+  font-size: 30px;
+  margin-bottom: 10px;
+}

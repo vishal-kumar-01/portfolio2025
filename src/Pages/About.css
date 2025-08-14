@@ -1,0 +1,215 @@
+/* .about {
+  padding: 80px 20px;
+   background-color: #121212;
+  color: #ffffff;
+  height: 90vh;
+} */
+
+
+.about {
+  min-height: 100vh;
+  background-color: #121212;
+  color: #ffffff;
+  padding: 60px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.about-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #00f5d4;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.about-text {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #dddddd;
+  margin-bottom: 40px;
+}
+
+.highlight {
+  color: #00f5d4;
+  font-weight: bold;
+}
+
+.sub-heading {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #00f5d4;
+  font-weight: 500;
+}
+
+.tech-icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  transition: all 0.5s ease;
+}
+
+.tech-icons img {
+  width: 50px;
+  height: 50px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  cursor: pointer;
+}
+
+.tech-icons img:hover {
+  transform: scale(1.2) rotate(5deg);
+  filter: drop-shadow(0 0 10px #00f5d4);
+}
+
+/* Reveal animation on scroll */
+.hidden-icons {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.show-icons {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Already existing styles... */
+
+.about-text {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #dddddd;
+  margin-bottom: 40px;
+  transition: all 0.6s ease;
+}
+
+/* Reusable animation classes */
+.hidden {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.tech-icons-carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90px;
+  position: relative;
+}
+
+.carousel-icon {
+  width: 70px;
+  height: 70px;
+  transition: transform 0.6s ease-in-out, filter 0.3s ease-in-out;
+  filter: drop-shadow(0 0 8px #00f5d4);
+  animation: fadeSlide 1s ease-in-out;
+}
+
+@keyframes fadeSlide {
+  0% {
+    opacity: 0;
+    transform: scale(0.7) translateY(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@media (max-width: 992px) {
+  .about {
+    height: auto;
+    padding: 60px 16px;
+  }
+
+  .about-container {
+    padding: 0 10px;
+  }
+
+  .section-title {
+    font-size: 28px;
+  }
+
+  .about-text {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .sub-heading {
+    font-size: 18px;
+  }
+
+  .tech-icons img {
+    width: 45px;
+    height: 45px;
+  }
+
+  .carousel-icon {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 600px) {
+  .section-title {
+    font-size: 24px;
+  }
+
+  .about-text {
+    font-size: 15px;
+    line-height: 1.4;
+    margin-bottom: 30px;
+  }
+
+  .sub-heading {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+
+  .tech-icons {
+    gap: 14px;
+  }
+
+  .tech-icons img {
+    width: 38px;
+    height: 38px;
+  }
+
+  .carousel-icon {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 400px) {
+  .about {
+    padding: 50px 12px;
+  }
+
+  .section-title {
+    font-size: 22px;
+  }
+
+  .about-text {
+    font-size: 14px;
+  }
+
+  .sub-heading {
+    font-size: 15px;
+  }
+}
